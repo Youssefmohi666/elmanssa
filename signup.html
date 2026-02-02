@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب جديد - منصة المتفوقين</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+    </div>
+    <div class="links">
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="signup.html">التسجيل</a></li>
+        <li><a href="login.html">دخول</a></li>
+        <li><a href="user.html">ملفي</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="auth-container">
+    <div class="auth-card">
+      <h2>إنشاء حساب جديد</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">الاسم الكامل</label>
+          <input type="text" id="name" placeholder="أدخل اسمك" required>
+        </div>
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">كلمة المرور</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">تأكيد كلمة المرور</label>
+          <input type="password" id="confirm-password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="auth-btn">إنشاء الحساب</button>
+      </form>
+      <div class="auth-footer">
+        لديك حساب بالفعل؟ <a href="login.html">سجل دخول</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+
+      <div class="footer-links">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="courses.html">الدورات</a></li>
+          <li><a href="signup.html">التسجيل</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <a href="tel:+201000000000"><i class="fas fa-phone"></i></a>
+        <a href="mailto:info@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+
+    </div>
+
+    <p class="footer-copy">
+      © 2026 All Rights Reserved
+    </p>
+  </footer>
+
+</body>
+
+</html>
