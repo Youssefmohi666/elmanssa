@@ -4,115 +4,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الملف الشخصي - منصة المتفوقين</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <title>لوحة الطالب | رحلتي التعليمية</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <nav>
-    <div class="logo">
-      <img src="logo.png" alt="logo">
-    </div>
-    <div class="links">
+    <div class="logo"><span>إلمنصة</span></div>
+    <div class="nav-links">
       <ul>
         <li><a href="index.html">الرئيسية</a></li>
         <li><a href="courses.html">الدورات</a></li>
-        <li><a href="signup.html">التسجيل</a></li>
-        <li><a href="login.html">دخول</a></li>
-        <li><a href="user.html">ملفي</a></li>
+        <li><a href="login.html" class="btn-premium" style="padding: 0.6rem 1.5rem;">خروج</a></li>
       </ul>
     </div>
   </nav>
 
-  <main style="padding: 4rem 8%;">
-    <div class="profile-header">
-      <div class="profile-avatar">أ</div>
-      <div class="profile-info">
-        <h1>أحمد محمد</h1>
-        <p>طالب في المستوى الثالث | ahmed@mail.com</p>
-        <div style="margin-top: 1rem;">
-          <span
-            style="background: rgba(99, 102, 241, 0.2); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 100px; font-weight: 600;">مشترك
-            نشط</span>
+  <main style="padding: 10rem 8% 5rem;">
+    <header style="margin-bottom: 4rem;">
+      <h1>مرحباً، <span style="color: var(--primary);">أحمد</span> 👋</h1>
+      <p style="color: var(--text-dim);">أنت تسير بشكل رائع! لقد أكملت 45% من مسارك التعليمي هذا الأسبوع.</p>
+    </header>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+      <!-- User Progress Card -->
+      <div class="glass-card" style="padding: 2.5rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 2rem;">
+          <h3>دورة الفيزياء</h3>
+          <span class="badge badge-success">قيد التقدم</span>
+        </div>
+        <div style="height: 12px; background: rgba(255,255,255,0.05); border-radius: 100px; margin-bottom: 1rem;">
+          <div
+            style="width: 75%; height: 100%; background: var(--primary); border-radius: 100px; box-shadow: 0 0 20px var(--primary-glow);">
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.8rem;">
+          <span>75% مكتمل</span>
+          <span>12/15 درس</span>
+        </div>
+        <button class="btn-premium" style="width:100%; margin-top: 2rem; font-size: 0.9rem;">متابعة الدرس
+          القادم</button>
+      </div>
+
+      <!-- Stats Card -->
+      <div class="glass-card"
+        style="padding: 2.5rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), transparent);">
+        <h3>إنجازاتك</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
+          <div style="text-align: center;">
+            <span class="stat-number" style="font-size: 2rem; display: block; color: var(--secondary);">24</span>
+            <span style="color: var(--text-muted);">ساعة دراسة</span>
+          </div>
+          <div style="text-align: center;">
+            <span class="stat-number" style="font-size: 2rem; display: block; color: var(--accent);">08</span>
+            <span style="color: var(--text-muted);">اختبارات منجزة</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <section class="dashboard-section">
-      <div class="section-header" style="text-align: right; margin-bottom: 2rem;">
-        <h2>دوراتي المسجلة</h2>
+    <section style="margin-top: 5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+        <h2>درجاتك السابقة</h2>
       </div>
-      <div class="dashboard-grid">
-        <div class="course-card" style="border-right: 4px solid var(--primary-color);">
-          <h3>الفيزياء – تحصيلي</h3>
-          <div class="progress-bar"
-            style="height: 8px; background: var(--surface-lighter); border-radius: 10px; margin: 1rem 0;">
-            <div style="width: 75%; height: 100%; background: var(--primary-color); border-radius: 10px;"></div>
-          </div>
-          <p>أنجزت 75% من الدورة</p>
-          <a href="#" class="btn">متابعة التعلم</a>
-        </div>
-
-        <div class="course-card" style="border-right: 4px solid var(--secondary-color);">
-          <h3>الرياضيات – تحصيلي</h3>
-          <div class="progress-bar"
-            style="height: 8px; background: var(--surface-lighter); border-radius: 10px; margin: 1rem 0;">
-            <div style="width: 30%; height: 100%; background: var(--secondary-color); border-radius: 10px;"></div>
-          </div>
-          <p>أنجزت 30% من الدورة</p>
-          <a href="#" class="btn">متابعة التعلم</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="dashboard-section" style="margin-top: 4rem;">
-      <div class="section-header" style="text-align: right; margin-bottom: 2rem;">
-        <h2>درجاتي في الاختبارات</h2>
-      </div>
-      <div class="stats" style="margin: 0; padding: 2rem;">
-        <div class="stat-item">
-          <span class="stat-number">95%</span>
-          <span class="stat-label">متوسط الفيزياء</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">88%</span>
-          <span class="stat-label">متوسط الرياضيات</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">92%</span>
-          <span class="stat-label">التقييم العام</span>
-        </div>
+      <div class="modern-table-container">
+        <table class="modern-table">
+          <thead>
+            <tr>
+              <th>المادة</th>
+              <th>الدرجة</th>
+              <th>التاريخ</th>
+              <th>التقدير</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>فيزياء 101</td>
+              <td class="stat-number">98/100</td>
+              <td>02 Feb 2026</td>
+              <td><span class="badge badge-success">ممتاز</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
-
-  <footer class="main-footer">
-    <div class="footer-content">
-
-      <div class="footer-links">
-        <ul>
-          <li><a href="index.html">الرئيسية</a></li>
-          <li><a href="courses.html">الدورات</a></li>
-          <li><a href="signup.html">التسجيل</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <a href="tel:+201000000000"><i class="fas fa-phone"></i></a>
-        <a href="mailto:info@example.com"><i class="fas fa-envelope"></i></a>
-      </div>
-
-    </div>
-
-    <p class="footer-copy">
-      © 2026 All Rights Reserved
-    </p>
-  </footer>
-
 </body>
 
 </html>

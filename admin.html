@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم الشاملة | الإدارة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div style="margin-bottom: 4rem;">
+        <span style="font-weight: 900; font-size: 1.5rem; color: var(--primary);">لوحة الإدارة</span>
+      </div>
+      <nav class="nav-links" style="flex-direction: column;">
+        <ul style="flex-direction: column; gap: 1rem;">
+          <li><a href="#stats" class="glass-card" style="display: block; padding: 1rem 1.5rem; border-radius: 12px;"><i
+                class="fas fa-home"></i> الإحصائيات</a></li>
+          <li><a href="#users" class="glass-card" style="display: block; padding: 1rem 1.5rem; border-radius: 12px;"><i
+                class="fas fa-users"></i> إدارة المستخدمين</a></li>
+          <li><a href="#courses" class="glass-card"
+              style="display: block; padding: 1rem 1.5rem; border-radius: 12px;"><i class="fas fa-book"></i> إدارة
+              الدورات</a></li>
+          <li><a href="#payments" class="glass-card"
+              style="display: block; padding: 1rem 1.5rem; border-radius: 12px;"><i class="fas fa-wallet"></i>
+              المدفوعات</a></li>
+          <li style="margin-top: 3rem;"><a href="index.html" style="color: var(--danger);"><i
+                class="fas fa-power-off"></i> خروج</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <header style="margin-bottom: 4rem; display: flex; justify-content: space-between; align-items: center;">
+        <h2>مرحباً، المدير</h2>
+        <button class="btn-premium" style="padding: 0.8rem 1.5rem;"><i class="fas fa-plus"></i> تحديث الحالة</button>
+      </header>
+
+      <!-- CRUD Sections are mock implementations using CSS :target or just direct display for this redesign -->
+
+      <!-- COURSES CRUD -->
+      <section id="courses-crud" class="glass-card" style="padding: 2.5rem; margin-bottom: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <h3>إدارة الدورات والمواد</h3>
+          <button class="btn-premium" style="font-size: 0.9rem;"><i class="fas fa-plus"></i> إضافة دورة</button>
+        </div>
+        <div class="modern-table-container">
+          <table class="modern-table">
+            <thead>
+              <tr>
+                <th>الدورة</th>
+                <th>المواد</th>
+                <th>السعر</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>الفيزياء التحصيلية</td>
+                <td>15 فيديو / 10 PDF</td>
+                <td>200 SAR</td>
+                <td>
+                  <button
+                    style="color: var(--accent); background: none; border: none; cursor: pointer; margin-left:1rem;"><i
+                      class="fas fa-edit"></i></button>
+                  <button style="color: var(--danger); background: none; border: none; cursor: pointer;"><i
+                      class="fas fa-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- USERS CRUD -->
+      <section id="users-crud" class="glass-card" style="padding: 2.5rem; margin-bottom: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <h3>إدارة الطلاب</h3>
+          <button class="btn-premium" style="font-size: 0.9rem;"><i class="fas fa-user-plus"></i> إضافة طالب</button>
+        </div>
+        <div class="modern-table-container">
+          <table class="modern-table">
+            <thead>
+              <tr>
+                <th>الاسم</th>
+                <th>الدورات</th>
+                <th>الحالة</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>أحمد محمد</td>
+                <td>الفيزياء ، الرياضيات</td>
+                <td><span class="badge badge-success">نشط</span></td>
+                <td>
+                  <button
+                    style="color: var(--accent); background: none; border: none; cursor: pointer; margin-left:1rem;"><i
+                      class="fas fa-user-edit"></i></button>
+                  <button style="color: var(--danger); background: none; border: none; cursor: pointer;"><i
+                      class="fas fa-user-minus"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PAYMENTS CRUD -->
+      <section id="payments-crud" class="glass-card" style="padding: 2.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <h3>سجل المدفوعات</h3>
+        </div>
+        <div class="modern-table-container">
+          <table class="modern-table">
+            <thead>
+              <tr>
+                <th>الطالب</th>
+                <th>المبلغ</th>
+                <th>تاريخ العملية</th>
+                <th>الحالة</th>
+                <th>إجراءات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ليلى ممدوح</td>
+                <td>180 SAR</td>
+                <td>2026/02/03</td>
+                <td><span class="badge badge-warning">قيد المراجعة</span></td>
+                <td>
+                  <button
+                    style="color: var(--success); background: none; border: none; cursor: pointer; margin-left:1rem;"><i
+                      class="fas fa-check"></i> قبولي</button>
+                  <button style="color: var(--danger); background: none; border: none; cursor: pointer;"><i
+                      class="fas fa-times"></i> رفض</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

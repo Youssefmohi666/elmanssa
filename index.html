@@ -4,160 +4,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منصة المتفوقين للتحصيلي</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
-    rel="stylesheet">
-  <!-- Font Awesome -->
+  <title>منصة المتفوقين | رحلتك نحو القمة</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <nav>
     <div class="logo">
-      <img src="logo.png" alt="logo">
+      <span>المنصة التعليمية</span>
     </div>
-    <div class="links">
+    <div class="nav-links">
       <ul>
         <li><a href="index.html">الرئيسية</a></li>
         <li><a href="courses.html">الدورات</a></li>
-        <li><a href="signup.html">التسجيل</a></li>
         <li><a href="login.html">دخول</a></li>
-        <li><a href="user.html">ملفي</a></li>
+        <li><a href="signup.html" class="btn-premium" style="padding: 0.6rem 1.5rem;">سجل الآن</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <div class="hero">
+    <section class="hero">
       <div class="hero-content">
-        <h1>طريقك للتميز في اختبار التحصيلي</h1>
-        <p>ابدأ رحلة النجاح مع نخبة من المدرسين وأحدث طرق التدريس</p>
-      </div>
-    </div>
-
-    <!-- Features Section -->
-    <section class="features">
-      <div class="section-header">
-        <h2>لماذا تختار منصتنا؟</h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <i class="fas fa-video"></i>
-          <h3>حصص مباشرة</h3>
-          <p>تفاعل مباشر مع المدرسين لطرح الأسئلة والاستفسارات.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-file-alt"></i>
-          <h3>ملخصات شاملة</h3>
-          <p>ملخصات مركزة لكل مادة تغنيك عن المشتتات.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-check-circle"></i>
-          <h3>اختبارات تجريبية</h3>
-          <p>محاكاة حقيقية لاختبار التحصيلي لتقييم مستواك.</p>
+        <span style="color: var(--primary); font-weight: 700; letter-spacing: 2px;">مستقبلك يبدأ من هنا</span>
+        <h1>طريقك للتميز في<br><span style="color: var(--secondary);">اختبار التحصيلي</span></h1>
+        <p style="color: var(--text-dim); font-size: 1.2rem; max-width: 600px; margin-bottom: 3rem;">نحن لا نقدم مجرد
+          دورات، بل نصنع قصص نجاح. انضم إلى الآلاف من الطلاب المتميزين وابدأ رحلتك التعليمية بأحدث التقنيات.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="courses.html" class="btn-premium">استكشف الدورات <i class="fas fa-arrow-left"></i></a>
+          <a href="#" class="btn-premium"
+            style="background: var(--glass-bg); border: 1px solid var(--glass-border);">تعرف علينا</a>
         </div>
       </div>
+      <div class="hero-visual"></div>
     </section>
 
-    <!-- Courses List -->
-    <section id="courses" class="courses-list">
-      <div class="section-header" style="grid-column: 1/-1; text-align: center; margin-bottom: 2rem;">
-        <h2>أحدث الدورات المتاحة</h2>
+    <section style="padding: 8% 8%;">
+      <div style="text-align: center; margin-bottom: 5rem;">
+        <h2 style="font-size: 3rem;">لماذا نحن الأفضل؟</h2>
       </div>
-      <div class="course-card">
-        <h3>الفيزياء – تحصيلي</h3>
-        <p>دورة شاملة تغطي جميع مفاهيم الفيزياء مع تدريبات مكثفة.</p>
-        <span class="price">200 SAR</span>
-        <a href="#" class="btn">اشترك الآن</a>
-      </div>
-
-      <div class="course-card">
-        <h3>الرياضيات – تحصيلي</h3>
-        <p>شرح مبسط لكل قوانين الرياضيات وتطبيقات عملية.</p>
-        <span class="price">180 SAR</span>
-        <a href="#" class="btn">اشترك الآن</a>
-      </div>
-
-      <div class="course-card">
-        <h3>الكيمياء – تحصيلي</h3>
-        <p>تأسيس قوي في الكيمياء يضمن لك الدرجة الكاملة.</p>
-        <span class="price">190 SAR</span>
-        <a href="#" class="btn">اشترك الآن</a>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-      <div class="stat-item">
-        <span class="stat-number">+10,000</span>
-        <span class="stat-label">طالب متفوق</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">+50</span>
-        <span class="stat-label">دورة تدريبية</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">98%</span>
-        <span class="stat-label">نسبة النجاح</span>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-      <div class="section-header">
-        <h2>ماذا يقول طلابنا؟</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>"بفضل الله ثم هذه المنصة، استطعت الحصول على درجة 95 في التحصيلي."</p>
-          <h4>- أحمد محمد</h4>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="glass-card" style="padding: 3rem; text-align: center;">
+          <i class="fas fa-video" style="font-size: 3rem; color: var(--primary); margin-bottom: 2rem;"></i>
+          <h3>حصص تفاعلية</h3>
+          <p style="color: var(--text-dim);">تواصل مباشر مع نخبة من أفضل الأساتذة في المملكة.</p>
         </div>
-        <div class="testimonial-card">
-          <p>"الشرح جداً واضح والملخصات كانت المنقذ الوحيد لي قبل الاختبار."</p>
-          <h4>- سارة علي</h4>
+        <div class="glass-card" style="padding: 3rem; text-align: center;">
+          <i class="fas fa-award" style="font-size: 3rem; color: var(--secondary); margin-bottom: 2rem;"></i>
+          <h3>محتوى متميز</h3>
+          <p style="color: var(--text-dim);">ملخصات وتجميعات حصرية لن تجدها في أي مكان آخر.</p>
+        </div>
+        <div class="glass-card" style="padding: 3rem; text-align: center;">
+          <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--accent); margin-bottom: 2rem;"></i>
+          <h3>متابعة دقيقة</h3>
+          <p style="color: var(--text-dim);">لوحة تحكم ذكية لمتابعة تطور مستواك الدراسي أولاً بأول.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-banner">
-      <h2>جاهز لبدء رحلة التميز؟</h2>
-      <p>سجل الآن واحصل على وصول كامل لجميع الدورات والملخصات.</p>
-      <button class="main-cta">ابدأ الآن مجاناً</button>
+    <section style="padding: 8% 8%;">
+      <div style="text-align: center; margin-bottom: 5rem;">
+        <h2 style="font-size: 3rem;">دوراتنا المميزة</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="glass-card" style="padding: 2rem; text-align: right;">
+          <img src="https://via.placeholder.com/300x200" alt="دورة التحصيلي"
+            style="width: 100%; border-radius: 10px; margin-bottom: 1.5rem;">
+          <h3 style="margin-bottom: 0.5rem;">دورة التحصيلي الشاملة</h3>
+          <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">تغطية كاملة لجميع أقسام اختبار
+            التحصيلي مع شروحات مفصلة.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-weight: 700; color: var(--primary);">499 ريال</span>
+            <div style="color: gold;">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span style="color: var(--text-dim); font-size: 0.9rem;">(4.5)</span>
+            </div>
+          </div>
+          <a href="#" class="btn-premium" style="width: 100%; text-align: center;">اشترك الآن</a>
+        </div>
+        <div class="glass-card" style="padding: 2rem; text-align: right;">
+          <img src="https://via.placeholder.com/300x200" alt="دورة القدرات"
+            style="width: 100%; border-radius: 10px; margin-bottom: 1.5rem;">
+          <h3 style="margin-bottom: 0.5rem;">دورة القدرات الكمي واللفظي</h3>
+          <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">استراتيجيات متقدمة لحل أسئلة
+            القدرات بأسرع وقت وأعلى دقة.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-weight: 700; color: var(--primary);">399 ريال</span>
+            <div style="color: gold;">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span style="color: var(--text-dim); font-size: 0.9rem;">(5.0)</span>
+            </div>
+          </div>
+          <a href="#" class="btn-premium" style="width: 100%; text-align: center;">اشترك الآن</a>
+        </div>
+        <div class="glass-card" style="padding: 2rem; text-align: right;">
+          <img src="https://via.placeholder.com/300x200" alt="دورة المراجعة النهائية"
+            style="width: 100%; border-radius: 10px; margin-bottom: 1.5rem;">
+          <h3 style="margin-bottom: 0.5rem;">المراجعة النهائية للتحصيلي</h3>
+          <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">مراجعة مكثفة لأهم النقاط
+            والتجميعات قبل الاختبار مباشرة.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span style="font-weight: 700; color: var(--primary);">249 ريال</span>
+            <div style="color: gold;">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span style="color: var(--text-dim); font-size: 0.9rem;">(4.0)</span>
+            </div>
+          </div>
+          <a href="#" class="btn-premium" style="width: 100%; text-align: center;">اشترك الآن</a>
+        </div>
+      </div>
     </section>
 
+    <section style="padding: 8% 8%; background: var(--glass-bg); border-top: 1px solid var(--glass-border);">
+      <div style="text-align: center; margin-bottom: 5rem;">
+        <h2 style="font-size: 3rem;">ماذا يقول طلابنا؟</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="glass-card" style="padding: 2rem; text-align: center;">
+          <img src="https://via.placeholder.com/80" alt="صورة طالب"
+            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+          <h4 style="margin-bottom: 0.5rem;">أحمد محمد</h4>
+          <p style="color: var(--text-dim); font-style: italic; margin-bottom: 1rem;">"بفضل المنصة، تمكنت من تحقيق
+            درجة عالية في التحصيلي لم أكن أحلم بها. الشرح واضح والأساتذة متعاونون جداً."</p>
+          <div style="color: gold;">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="glass-card" style="padding: 2rem; text-align: center;">
+          <img src="https://via.placeholder.com/80" alt="صورة طالبة"
+            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+          <h4 style="margin-bottom: 0.5rem;">فاطمة الزهراء</h4>
+          <p style="color: var(--text-dim); font-style: italic; margin-bottom: 1rem;">"المحتوى منظم بشكل رائع
+            والاختبارات التجريبية ساعدتني كثيراً على التعود على أجواء الاختبار الحقيقي. شكراً لكم!"</p>
+          <div style="color: gold;">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="glass-card" style="padding: 2rem; text-align: center;">
+          <img src="https://via.placeholder.com/80" alt="صورة طالب"
+            style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+          <h4 style="margin-bottom: 0.5rem;">يوسف خالد</h4>
+          <p style="color: var(--text-dim); font-style: italic; margin-bottom: 1rem;">"أفضل منصة تعليمية تعاملت معها.
+            الدعم الفني سريع جداً وحلوا لي كل المشاكل اللي واجهتني. أنصح بها بشدة."</p>
+          <div style="color: gold;">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="main-footer">
-    <div class="footer-content">
-
-      <div class="footer-links">
-        <ul>
-          <li><a href="index.html">الرئيسية</a></li>
-          <li><a href="courses.html">الدورات</a></li>
-          <li><a href="signup.html">التسجيل</a></li>
-        </ul>
+  <footer
+    style="padding: 5rem 8%; border-top: 1px solid var(--glass-border); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4rem;">
+    <div style="max-width: 300px;">
+      <span
+        style="font-weight: 900; font-size: 1.8rem; background: linear-gradient(135deg, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">المنصة
+        التعليمية</span>
+      <p style="color: var(--text-muted); margin-top: 1.5rem;">نهدف لتقديم أفضل تجربة تعليمية للطلاب للوصول إلى أعلى
+        الدرجات في اختبارات التحصيلي والقدرات.</p>
+      <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+        <a href="#" style="color: var(--text-muted); font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="color: var(--text-muted); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color: var(--text-muted); font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
       </div>
-
-      <div class="footer-contact">
-        <a href="tel:+201000000000"><i class="fas fa-phone"></i></a>
-        <a href="mailto:info@example.com"><i class="fas fa-envelope"></i></a>
-      </div>
-
     </div>
 
-    <p class="footer-copy">
-      © 2026 All Rights Reserved
-    </p>
+    <div class="footer-complaint">
+      <h4>تقديم شكوى أو اقتراح</h4>
+      <form class="complaint-form">
+        <input type="text" placeholder="الاسم الكامل">
+        <input type="email" placeholder="البريد الإلكتروني">
+        <textarea placeholder="اكتب شكواك أو اقتراحك هنا..."></textarea>
+        <button type="submit" class="btn-premium" style="padding: 0.6rem 2rem;">إرسال</button>
+      </form>
+    </div>
+
+    <div
+      style="width: 100%; text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+      <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 جميع الحقوق محفوظة لـ إلمنصة</p>
+    </div>
   </footer>
-
-
 </body>
 
 </html>
