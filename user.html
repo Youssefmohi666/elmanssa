@@ -1,95 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>لوحة الطالب | رحلتي التعليمية</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <nav>
-    <div class="logo"><span>إلمنصة</span></div>
-    <div class="nav-links">
-      <ul>
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="courses.html">الدورات</a></li>
-        <li><a href="login.html" class="btn-premium" style="padding: 0.6rem 1.5rem;">خروج</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main style="padding: 10rem 8% 5rem;">
-    <header style="margin-bottom: 4rem;">
-      <h1>مرحباً، <span style="color: var(--primary);">أحمد</span> 👋</h1>
-      <p style="color: var(--text-dim);">أنت تسير بشكل رائع! لقد أكملت 45% من مسارك التعليمي هذا الأسبوع.</p>
-    </header>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-      <!-- User Progress Card -->
-      <div class="glass-card" style="padding: 2.5rem;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 2rem;">
-          <h3>دورة الفيزياء</h3>
-          <span class="badge badge-success">قيد التقدم</span>
-        </div>
-        <div style="height: 12px; background: rgba(255,255,255,0.05); border-radius: 100px; margin-bottom: 1rem;">
-          <div
-            style="width: 75%; height: 100%; background: var(--primary); border-radius: 100px; box-shadow: 0 0 20px var(--primary-glow);">
-          </div>
-        </div>
-        <div style="display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.8rem;">
-          <span>75% مكتمل</span>
-          <span>12/15 درس</span>
-        </div>
-        <button class="btn-premium" style="width:100%; margin-top: 2rem; font-size: 0.9rem;">متابعة الدرس
-          القادم</button>
-      </div>
-
-      <!-- Stats Card -->
-      <div class="glass-card"
-        style="padding: 2.5rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), transparent);">
-        <h3>إنجازاتك</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
-          <div style="text-align: center;">
-            <span class="stat-number" style="font-size: 2rem; display: block; color: var(--secondary);">24</span>
-            <span style="color: var(--text-muted);">ساعة دراسة</span>
-          </div>
-          <div style="text-align: center;">
-            <span class="stat-number" style="font-size: 2rem; display: block; color: var(--accent);">08</span>
-            <span style="color: var(--text-muted);">اختبارات منجزة</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section style="margin-top: 5rem;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
-        <h2>درجاتك السابقة</h2>
-      </div>
-      <div class="modern-table-container">
-        <table class="modern-table">
-          <thead>
-            <tr>
-              <th>المادة</th>
-              <th>الدرجة</th>
-              <th>التاريخ</th>
-              <th>التقدير</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>فيزياء 101</td>
-              <td class="stat-number">98/100</td>
-              <td>02 Feb 2026</td>
-              <td><span class="badge badge-success">ممتاز</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-</body>
-
-</html>
