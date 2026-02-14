@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot | AI Service</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #034289;
+      --secondary: #4F8751;
+      --bg-dark: #022a5c;
+      --bg-darker: #01162e;
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg-darker);
+      color: var(--text-main);
+      background-image: radial-gradient(circle at 10% 10%, rgba(3, 66, 137, 0.2) 0%, transparent 40%);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-container {
+      flex: 1;
+      max-width: 1000px;
+      width: 95%;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chat-box {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .message {
+      padding: 12px 20px;
+      border-radius: 15px;
+      max-width: 70%;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .user-msg {
+      align-self: flex-end;
+      background: var(--primary);
+      color: white;
+      border-bottom-right-radius: 2px;
+    }
+
+    .ai-msg {
+      align-self: flex-start;
+      background: rgba(255, 255, 255, 0.1);
+      border-bottom-left-radius: 2px;
+    }
+
+    .input-area {
+      padding: 20px;
+      border-top: 1px solid var(--glass-border);
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 15px 20px;
+      color: white;
+      outline: none;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 0 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: var(--secondary);
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .back-btn:hover {
+      color: white;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/ai" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+        <h2 style="margin: 0;">AI Chatbot</h2>
+      </div>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <button id="clearBtn" style="background: rgba(255,255,255,0.1); padding: 8px 15px; font-size: 0.8rem;">
+          <i class="fas fa-trash-alt"></i> Clear
+        </button>
+        <div class="status">
+          <span style="color: #4F8751;"><i class="fas fa-circle" style="font-size: 0.7rem;"></i> Online</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+      <!-- Messages will appear here -->
+    </div>
+
+    <form class="input-area" id="chatForm">
+      <input type="text" id="userInput" placeholder="Ask me anything..." required autocomplete="off">
+      <button type="submit">Send <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+    </form>
+  </div>
+
+  <script src="/static/chat.js"></script>
+</body>
+
+</html>

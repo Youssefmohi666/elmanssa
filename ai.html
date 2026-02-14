@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Service | Premium Intelligence</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap');
+
+    :root {
+      --primary: #034289;
+      --primary-glow: rgba(3, 66, 137, 0.5);
+      --secondary: #4F8751;
+      --bg-dark: #022a5c;
+      --bg-darker: #01162e;
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background: var(--bg-darker);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 10% 10%, rgba(3, 66, 137, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(79, 135, 81, 0.15) 0%, transparent 40%);
+    }
+
+    /* Glassmorphism Generic */
+    .glass {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+    }
+
+    /* Header */
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1200px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+
+    /* Hero Section */
+    main {
+      padding-top: 150px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 80px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #0459b7, #6ba96d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Grid Layout */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 100px;
+    }
+
+    .card {
+      padding: 40px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--primary);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      display: block;
+      color: var(--primary);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Chat Component */
+    .chat-container {
+      max-width: 800px;
+      margin: 0 auto 100px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .chat-box {
+      height: 400px;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .message {
+      padding: 12px 20px;
+      border-radius: 15px;
+      max-width: 80%;
+      font-size: 0.95rem;
+    }
+
+    .user-msg {
+      align-self: flex-end;
+      background: var(--primary);
+      color: white;
+    }
+
+    .ai-msg {
+      align-self: flex-start;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .input-area {
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 15px 20px;
+      color: white;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 0 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: var(--secondary);
+      transform: scale(1.02);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 60px 0;
+      color: var(--text-muted);
+      border-top: 1px solid var(--glass-border);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="glass">
+    <div class="logo">AI.SERVICE</div>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <div id="healthStatus"
+        style="font-size: 0.8rem; display: flex; align-items: center; gap: 8px; color: var(--text-muted);">
+        <i class="fas fa-circle" style="color: #666;"></i> Checking System...
+      </div>
+      <div class="nav-links">
+        <a href="/ai" style="color: white; text-decoration: none; font-weight: 600;">Models</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Infinite Intelligence <br><span class="gradient-text">At Your Command</span></h1>
+      <p>Select your preferred AI interaction model to begin your journey of discovery and creation.
+      </p>
+    </section>
+
+    <section class="features">
+      <div class="card glass" onclick="window.location.href='/ai/chat'">
+        <i class="fas fa-comments"></i>
+        <h3>Interactive Chatbot</h3>
+        <p>Engage in deep, context-aware conversations and get instant answers to your questions.</p>
+        <button style="margin-top: 20px; width: 100%;">Start Chatting</button>
+      </div>
+      <div class="card glass" onclick="window.location.href='/ai/generate'">
+        <i class="fas fa-wand-magic-sparkles"></i>
+        <h3>Creative Generator</h3>
+        <p>Unlock your creative potential with advanced generation for code, text, and assets.</p>
+        <button style="margin-top: 20px; width: 100%; background: var(--secondary);">Launch Generator</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AI Service. Built with passion for the future.</p>
+  </footer>
+
+  <script>
+    async function checkHealth() {
+      const statusLine = document.getElementById('healthStatus');
+      try {
+        const res = await fetch('/api/health');
+        const data = await res.json();
+        if (data.status === 'healthy') {
+          statusLine.innerHTML = '<i class="fas fa-circle" style="color: #4F8751;"></i> System Operational';
+          statusLine.style.color = '#cbd5e1';
+        }
+      } catch (e) {
+        statusLine.innerHTML = '<i class="fas fa-circle" style="color: #ef4444;"></i> System Offline';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', checkHealth);
+  </script>
+</body>
+
+</html>
