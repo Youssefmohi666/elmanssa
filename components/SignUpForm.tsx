@@ -36,7 +36,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ initialAccountType = 'student',
       );
       console.log(res.data);
       // ممكن توجه المستخدم للصفحة التالية لو التسجيل نجح
-      // onNavigate('login');
+      onNavigate('/');
     } catch (err: any) {
       console.error(err.response ? err.response.data : err.message);
     } finally {
@@ -244,4 +244,22 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ initialAccountType = 'student',
                 {isLoading ? (
                   <>
                     <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12"
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                    </svg>
+                    جاري التسجيل
+                  </>
+                ) : (
+                  'إنشاء حساب'
+                )}
+              </span>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SignUpForm;
