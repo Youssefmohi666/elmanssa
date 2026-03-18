@@ -1,5 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
+import axios from 'axios'; // مهم جداً
 import { Page, AccountType } from '../App';
 
 interface SignUpFormProps {
@@ -16,12 +16,32 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ initialAccountType = 'student',
     setAccountType(initialAccountType);
   }, [initialAccountType]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
+
+    const emailInput = (document.getElementById('email') as HTMLInputElement).value;
+    const passwordInput = (document.getElementById('password') as HTMLInputElement).value;
+    const fullNameInput = (document.getElementById('fullName') as HTMLInputElement).value;
+
+    try {
+      const res = await axios.post('/api/v1/auth/signup',
+        {
+          email: emailInput,
+          password: passwordInput,
+          fullName: fullNameInput,
+          accountType: accountType
+        },
+        { headers: { 'Content-Type': 'application/json' } }
+      );
+      console.log(res.data);
+      // ممكن توجه المستخدم للصفحة التالية لو التسجيل نجح
+      // onNavigate('login');
+    } catch (err: any) {
+      console.error(err.response ? err.response.data : err.message);
+    } finally {
       setIsLoading(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -224,34 +244,4 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ initialAccountType = 'student',
                 {isLoading ? (
                   <>
                     <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    جاري إنشاء الحساب...
-                  </>
-                ) : (
-                  'إنشاء الحساب'
-                )}
-              </span>
-            </button>
-          </form>
-
-          {/* Login Link */}
-          <div className="text-center mt-8">
-            <p className="text-[#034289]/70">
-              لديك حساب بالفعل؟{' '}
-              <button
-                onClick={() => onNavigate('login')}
-                className="font-bold text-[#4F8751] hover:underline"
-              >
-                تسجيل الدخول
-              </button>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default SignUpForm;
+                      <circle className="opacity-25" cx="12" cy="12"
