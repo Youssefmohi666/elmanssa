@@ -14,8 +14,12 @@ import CourseDetailPage from './components/CourseDetailPage';
 import AboutPage from './components/AboutPage';
 import LiveStreamPage from './components/LiveStreamPage';
 import AIPage from './components/AIPage';
+import PricingPage from './components/PricingPage';
+import BlogPage from './components/BlogPage';
+import SupportPage from './components/SupportPage';
+import PrivacyPage from './components/PrivacyPage';
 
-export type Page = 'home' | 'courses' | 'signup' | 'login' | 'course-detail' | 'about' | 'live-stream' | 'ai';
+export type Page = 'home' | 'courses' | 'signup' | 'login' | 'course-detail' | 'about' | 'live-stream' | 'ai' | 'pricing' | 'blog' | 'support' | 'privacy';
 export type AccountType = 'student' | 'teacher';
 
 const App: React.FC = () => {
@@ -62,6 +66,14 @@ const App: React.FC = () => {
         return <LiveStreamPage onNavigate={navigateTo} />;
       case 'ai':
         return <AIPage onNavigate={navigateTo} />;
+      case 'pricing':
+        return <PricingPage onNavigate={navigateTo} />;
+      case 'blog':
+        return <BlogPage onNavigate={navigateTo} />;
+      case 'support':
+        return <SupportPage onNavigate={navigateTo} />;
+      case 'privacy':
+        return <PrivacyPage onNavigate={navigateTo} />;
       case 'about':
         return <AboutPage onNavigate={navigateTo} />;
       default:
@@ -72,10 +84,10 @@ const App: React.FC = () => {
   return (
     <div className="bg-[#FEFEFE] min-h-screen flex flex-col text-[#034289] overflow-x-hidden">
       <Header onNavigate={navigateTo} currentPage={currentPage} />
-      <main className="flex-grow">
+      <main className="flex-grow pt-[82px]">
         {renderPage()}
       </main>
-      <Footer />
+      <Footer onNavigate={navigateTo} />
     </div>
   );
 };
